@@ -1,5 +1,5 @@
 <?php
-include __DIR__.'config.php';
+include __DIR__.'/config.php';
 
 $json_string = file_get_contents('php://input');
 $json_object = json_decode($json_string);
