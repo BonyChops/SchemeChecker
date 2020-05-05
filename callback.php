@@ -80,7 +80,7 @@ function pushing_messages($accessToken, $to, $response_format_text){
 
 function sending_messages($accessToken, $replyToken, $response_format_text){
     //レスポンスフォーマット
-
+    echo $accessToken;
     //ポストデータ
     $post_data = [
         "replyToken" => $replyToken,
