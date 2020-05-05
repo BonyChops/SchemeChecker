@@ -11,7 +11,7 @@ if ($message_type == "text"){
     $response_format_text = [generateFlex($message_text)];
 }else{
     $response_format_text = [[
-        "type" => "test",
+        "type" => "text",
         "text" => "🤔"
     ]];
 }
