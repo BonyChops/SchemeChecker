@@ -30,7 +30,7 @@ function generateFlex($url){
           "contents"=> [
             [
               "type"=> "text",
-              "text"=> "hello, world",
+              "text"=> trim($url),
               "wrap"=> true,
               "align"=> "center"
             ]
