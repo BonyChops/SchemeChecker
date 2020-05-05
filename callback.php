@@ -7,8 +7,8 @@ $replyToken = $json_object->{"events"}[0]->{"replyToken"};
 $message_type = $json_object->{"events"}[0]->{"message"}->{"type"};    //メッセージタイプ
 
 if ($message_type == "text"){
-   $response_format_text = [generateFlex($message_text)];
-   $message_text = $json_object->{"events"}[0]->{"message"}->{"text"};    //メッセージ内容
+    $message_text = $json_object->{"events"}[0]->{"message"}->{"text"};    //メッセージ内容
+    $response_format_text = [generateFlex($message_text)];
 }else{
     $response_format_text = [[
         "type" => "test",
@@ -16,8 +16,8 @@ if ($message_type == "text"){
     ]];
 }
 
-echo sending_messages(LINE_ACCESS_TOKEN, $replyToken, $response_format_text);
-
+$result = sending_messages(LINE_ACCESS_TOKEN, $replyToken, $response_format_text);
+file_put_contents("test.json", $result);
 function generateFlex($url){
     return [
         "type"=> "flex",
