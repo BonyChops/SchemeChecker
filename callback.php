@@ -17,7 +17,6 @@ if ($message_type == "text"){
 }
 
 $result = sending_messages(LINE_ACCESS_TOKEN, $replyToken, $response_format_text);
-file_put_contents("test.json", $result);
 function generateFlex($url){
     return [
         "type"=> "flex",
